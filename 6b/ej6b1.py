@@ -79,10 +79,11 @@ def create_log(names):
     letter_counts = count_letters(names)
     
     logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(message)s",
+        level=logging.DEBUG,
+        format="%(levelname)s:%(name)s: %(message)s",
         filename="production.log",
-        filemode="w"
+        filemode="w",
+        force=True
         )
     
     logging.info(f'Letter counts: {letter_counts}')

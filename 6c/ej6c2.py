@@ -77,12 +77,14 @@ Exemple:
 
 def read_txt_file(path: str) -> str:
     #Write your code here
-    pass
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+    return text
 
 
 def words_counter(text: str, word: str) -> int:
     #Write your code here
-    pass
+    return text.lower().count(word.lower())
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
@@ -92,5 +94,5 @@ def words_counter(text: str, word: str) -> int:
 # print(text[-25:])
 
 # word = "data"
-# count = words_counter(text, word)
+# ount = words_counter(text, word)
 # print(f"The word '{word}' appears {count} times in the text.")

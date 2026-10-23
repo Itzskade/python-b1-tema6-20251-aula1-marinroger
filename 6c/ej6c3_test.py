@@ -1,5 +1,5 @@
 import pandas as pd
-from ej6c3 import read_parquet_file, calculate_amount_quanity
+from ej6c3 import read_parquet_file, calculate_amount_quantity
 import os, pathlib
 
 
@@ -33,7 +33,7 @@ def test_calculate_amount_quantity():
         {"price": [10, 20, 30], "units_sold": [2, 4, 6], "amount": [20, 80, 180]}
     )
 
-    df_result = calculate_amount_quanity(df_test)
+    df_result = calculate_amount_quantity(df_test)
     try:
         pd.testing.assert_frame_equal(df_result, df_expected)
     except AssertionError:

@@ -90,7 +90,6 @@ import pandas as pd
 
 def read_parquet_file(path: str) -> pd.DataFrame:
     #Write your code here
-    print(pd.read_parquet(path))
     return pd.read_parquet(path)
 
 def calculate_amount_quantity(dataframe: pd.DataFrame):
